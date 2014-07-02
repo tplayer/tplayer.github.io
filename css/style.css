@@ -153,39 +153,20 @@ a {
 
 .weixin {
 	position: absolute;
-	width: 362px;
-	padding: 5px;
+	width: 275px;
 	right: 100px;
 	bottom: 78px;
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 14px;
+	line-height: 22px;
 	color: #fff;
-}
-
-.weixin strong {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	background: #000;
-	filter:alpha(opacity=20);  /*支持 IE 浏览器*/
-	-moz-opacity:0.20; /*支持 FireFox 浏览器*/
-	opacity:0.20;  /*支持 Chrome, Opera, Safari 等浏览器*/
-}
-
-.weixin p {
-	position: relative;
-	z-index: 2;
 }
 
 .weixin img {
 	float: left;
-	margin-right: 23px;
+	margin-right: 15px;
 }
 
 .weixin span {
-	padding: 17px 0;
 	display: block;
 	float: left; 
 }
