@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Tplayer_坦克播放器_万能播放器官方下载</title>
-<meta  name="Keywords" content="tplayer,坦克播放器，android播放器,智能电视播放器,视频播放器,官方下载,万能播放器">
-<meta name="description" content="TPlayer坦克播放器是一款应用于Android智能电视、 手机、平板的视频播放器，具有强大的解码功能，支持本地播放、 网络播放功能，支持FLV、AVI、WMV、WMA、MP3、MP4、RMVB等几乎所有视频格式，是Android系统，智能电视一款不可多得的播放器" />
+<meta name="Keywords" content="tplayer,坦克播放器，android播放器,智能电视播放器,视频播放器,官方下载,万能播放器">
+<meta name="description" content="TPlayer坦克播放器是一款应用于Android智能电视、 手机、平板的视频播放器，具有强大的解码功能，支持本地播放、 网络播放功能，支持FLV、AVI、WMV、WMA、MP3、MP4、RMVB等几乎所有视频格式，是Android系统，智能电视一款不可多得的播放器">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
 <script type="text/javascript">
 function MM_swapImgRestore() { //v3.0
   var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
@@ -28,8 +29,31 @@ function MM_swapImage() { //v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
+
+$(function(){
+	$('.pop-menu-con').height($('.pop-con').height()-100);
+	$('.pop').hide();
+	$('.pop-close').click(function(){
+		$('.pop').fadeOut();
+	});
+	$('.contact-text a').click(function(){
+		$('.pop').fadeIn();
+		var menuName = $(this).attr('rel');
+		$('.pop-menu-con div').hide();
+		$('#'+ menuName).show();
+		$('.pop-menu a').removeClass('selected');
+		$('.pop-menu a[rel="' + menuName + '"]').addClass('selected');
+	});
+	
+	$('.pop-menu a').click(function(){
+		var menuName = $(this).attr('rel');
+		$('.pop-menu-con div').hide();
+		$('#'+ menuName).show();
+		$('.pop-menu a').removeClass('selected');
+		$('.pop-menu a[rel="' + menuName + '"]').addClass('selected');
+	});
+});
 </script>
-<script type="text/javascript" name="baidu-tc-cerfication" src="http://apps.bdimg.com/cloudaapi/lightapp.js#41ed663dfea1c760118bea016deae8f6"></script> <script type="text/javascript">window.bd && bd._qdc && bd._qdc.init({app_id: 'f46d5a61857bc76da1435b7d'});</script>
 </head>
 
 <body onLoad="MM_preloadImages('images/pic_btn2.png')">
@@ -37,18 +61,15 @@ function MM_swapImage() { //v3.0
 <div class="container">
   <div class="logo"><img src="images/logo.png"></div>
   <div class="contact">
+    <div class="contact-text"><a href="javascript:;" rel="menu-con-0">关于</a> | <a href="javascript:;" rel="menu-con-1">帮助</a></div>
     <ul>
-        <!--
-      <li class="icon-qq"><a href="#"><img src="images/pic_qq.png"></a><strong></strong><span>Q群：374137877</span></li>
-      <li class="icon-sina"><a href="#"><img src="images/pic_sina.png"></a><strong></strong><span>@坦克播放器</span></li>
-         -->
       <li class="icon-qq"><a href="#"><img src="images/pic_qq.png"></a><strong></strong><span>Q群：374137877</span></li>
       <li class="icon-sina"><a target="_blank" href="http://weibo.com/u/5182142960"><img src="images/pic_sina.png"></a><strong></strong><span>@坦克播放器</span></li>
     </ul>
   </div>
   <div class="content">
     <div class="con-pic"><img src="images/pic_txt1.png"></div>
-    <div class="down-btn"><a href="/Tplayer-1.00-arm-17731-alpha.apk" target="_blank" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','images/pic_btn2.png',1)"><img src="images/pic_btn1.png" name="Image6" border="0"></a>
+    <div class="down-btn"><a href="/Tplayer-1.00-arm-17731-alpha.apk" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','images/pic_btn2.png',1)"><img src="images/pic_btn1.png" name="Image6" border="0"></a>
       <p><img src="images/pic_txt2.png"></p>
     </div>
     
@@ -58,6 +79,57 @@ function MM_swapImage() { //v3.0
     最新版本：1.0 <br>
     文件大小：6MB<br>
     更新时间：2014.07.11</span></p>
+  </div>
+</div>
+<div class="pop">
+  <div class="pop-bg"></div>
+  <div class="pop-con">
+    <div class="pop-close"></div>
+    <div class="pop-menu">
+      <ul>
+        <li><a href="javascript:;" rel="menu-con-0">关于</a></li>
+        <li><a href="javascript:;" rel="menu-con-1">帮助</a></li>
+      </ul>
+    </div>
+    <div class="pop-menu-con">
+      <div id="menu-con-0">
+        <p class="about-tit">简介：</p>
+        <p>Tplayer，又叫坦克播放器，是一款针对Android智能电视研发的播放器，具有强大的解码功能，支持智能软硬解码切换，提供智能电视流畅的操作体验，同时，Tplayer支持本地播放和网络播放功能，完美兼容Android手机、平板、电视， 支持被视频软件作为第三方播放器的调用，并解决各种不能播放的问题，是Android智能终端不可多得的视频播放器。<br>
+        </p>
+        <p class="about-tit">软件特点：</p>
+        <p class="last">1、针对智能电视研发，在电视上有流畅的操作体验（完美支持小米盒子，乐视盒子，乐视电视等，理论支持所有的Android智能电视）<br>
+          2、支持全格式视频播放功能<br>
+          3、支持本地播放和在线播放（在线播放需要安装兔子视频\电视猫等可以调用第三方播放器的软件）<br>
+          4、Android 智能电视唯一一个具备有缓冲功能的播放器，网络不好的同学有福了<br>
+          5、支持DLNA功能，可以通过搜狐视频，爱奇艺等手机APP远程轻松投放<br>
+          6、支持搜索播放局域网内共享设备上的视频，PC端的视频即可远程播放到电视上<br>
+        </p>
+      </div>
+      <div id="menu-con-1">
+        <p>如何通过Tplayer在电视上播放PC端的视频</p>
+        <p><span>Tplayer播放器，可以播放本地视频和在线视频，同时使用Tplayer的局域网远程播放功能，还可以播放PC端本地视频。使用方法如下：</span></p>
+        <p>操作步骤：<br>
+		Step1：几步学会Windows 7系统的局域网文件共享设置方法</p>
+        <p><span>一、打开PC端的"控制面板"，单击"网络和共享中心"</span>
+        <img src="images/help-1.jpg"></p>
+        <p><span>二、"网络和共享中心"窗口，选择点击"更改高级共享设置"</span>
+        <img src="images/help-2.jpg"></p>
+        <p><span>三、点击进入"选择媒体流选项"，在"媒体流选项"窗口中，你可以给自己PC共享端起一个响亮的名字，同时对一些设备的共享设置"已允许"，并点击"确定"，然后重启电脑，保证共享的服务开启</span>
+        <img src="images/help-3.jpg"></p>
+        <p><span>四、重启电脑后，打开PC上的Window Media Player，点击"媒体流"——打钩选择"允许远程控制播放器"</span>
+        <img src="images/help-4.jpg"></p>
+        <p><span>五、在PC端中，选择一个视频，并将视频文件拖到Window Media Player视频播放列表中</span>
+        <img src="images/help-5.jpg">
+        <img src="images/help-6.jpg"></p>
+        <p><span>Step2：将Tplayer安装到网络机顶盒/智能电视，远程播放PC端视频<br>
+		一、打开网络机顶盒，通过U盘安装Tplayer，也可以通过浏览器打开网址http://www.tplayer.cn下载安装，安装完毕后，进入"全部应用"，找到并打开Tplayer</span>
+        <img src="images/help-7.jpg"></p>
+        <p><span>二、检测到PC端的共享文件后，打开该共享文件，即可播放文件中的视频</span>
+        <img src="images/help-8.jpg">
+        <img src="images/help-9.jpg"></p>
+        <p><span>通过Tplayer完美实现了将PC端视频投放到电视上播放的功能</span></p>
+      </div>
+    </div>
   </div>
 </div>
 </body>

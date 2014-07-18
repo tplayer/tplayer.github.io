@@ -56,9 +56,34 @@ a {
 
 .contact {
 	float: right;
-	width: 7.5%;
-	max-width: 216px;
 	margin: 60px 110px;
+	width: 15.5%;
+	max-width: 280px;
+	position: relative;
+	overflow: hidden;
+}
+
+.contact .contact-text {
+	width: 52.5%;
+	max-width: 147px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -12px;
+	height: 24px;
+	line-height: 24px;
+	font-size: 18px;
+	color: #fff;
+}
+
+.contact .contact-text a {
+	color: #fff;
+}
+
+.contact ul {
+	float: right;
+	width: 47.5%;
+	max-width: 133px;
 }
 
 .contact li {
@@ -228,6 +253,105 @@ a {
 }
 
 
+.pop {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 3;
+}
+
+.pop .pop-bg {
+	background: #000;
+	filter:alpha(opacity=80);  /*支持 IE 浏览器*/
+	-moz-opacity:0.80; /*支持 FireFox 浏览器*/
+	opacity:0.80;  /*支持 Chrome, Opera, Safari 等浏览器*/
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.pop-con {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 10% 15% 5%;
+}
+
+.pop-con .pop-close {
+	float: right;
+	background: url(../images/close.png) no-repeat;
+	width: 38px;
+	height: 38px;
+	cursor: pointer;
+}
+ 
+.pop-con .pop-menu {
+	height: 100px;
+}
+
+.pop-con .pop-menu li {
+	width: 150px;
+	float: left;
+}
+
+.pop-con .pop-menu li a {
+	float: left;
+	display: block;
+	height: 47px;
+	line-height: 33px;
+	font-size: 33px;
+	color: #909391;
+}
+
+.pop-con .pop-menu li a.selected {
+	color: #016bf6;
+	border-bottom: 2px #016bf6 solid;
+}
+
+.pop-con .pop-menu-con {
+	overflow: hidden;
+	overflow-y: auto;
+	padding-right: 90px;
+}
+
+.pop-con .pop-menu-con #menu-con-0 p {
+	margin-bottom: 70px;
+	line-height: 38px;
+	color: #fff;
+	font-size: 20px;
+}
+
+.pop-con .pop-menu-con #menu-con-0 p.about-tit {
+	font-size: 26px;
+	margin-bottom: 30px;
+}
+
+.pop-con .pop-menu-con #menu-con-0 p.last {
+	margin-bottom: 0;
+}
+
+.pop-con .pop-menu-con #menu-con-1 p {
+	line-height: 38px;
+	color: #fff;
+	font-size: 26px;
+	margin-bottom: 30px;
+}
+
+.pop-con .pop-menu-con #menu-con-1 p span {
+	font-size: 20px;
+}
+
+.pop-con .pop-menu-con #menu-con-1 p img {
+	width: 100%;
+	margin: 15px 0;
+}
 
 
 
